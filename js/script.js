@@ -40,7 +40,7 @@ fetch('https://rickandmortyapi.com/api/character/?page=1')//Traemos los datos, c
 //A continuación con los botones capturados, paginamos:
 
 nextPage.addEventListener('click', () => {
-    fetch('https://rickandmortyapi.com/api/character/?page=2')
+    fetch('https://rickandmortyapi.com/api/character/?page=2') //Hay que generar +1 ¿Como?, dentro de una función....? 
     .then(response => response.json())
     .catch((error) => {
         characterList.innerText = 'Error: No se pudieron obtener los personajes';
@@ -61,3 +61,9 @@ nextPage.addEventListener('click', () => {
    })
 })
 
+/*let paginaActual = 1 
+function avanzarPagina() {
+    paginaActual = paginaActual +1;
+    renderizar();
+}
+avanzarPagina();*/
